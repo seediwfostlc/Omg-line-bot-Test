@@ -34,7 +34,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			"$messages":[
+			"messages":[
         			{
             				"type":"text",
             				"text":"เตรียมการสร้างโพสการแข่งแล้ว"
@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 				
 				$date = $text;
 				if($date == $text){$replyToken = $event['replyToken'];
-							"$messages":[
+							"messages":[
         							{
             								"type":"text",
             								"text":"OK ตั้งวันที่แล้ว วันที่ "+$date
@@ -59,7 +59,7 @@ if (!is_null($events['events'])) {
     								     ]}
 				    $vs = $text;
 				    if($vs == $text){$replyToken = $event['replyToken'];
-						    "$messages":[
+						    "messages":[
         							{
             								"type":"text",
             								"text":"OK "$date
