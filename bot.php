@@ -25,6 +25,51 @@ if (!is_null($events['events'])) {
 			];
 
 			}
+			if($text == 'bot set')
+			{
+				$date = '';
+				$vs = '';
+				
+				// Get replyToken
+			$replyToken = $event['replyToken'];
+
+			// Build message to reply back
+			"$messages":[
+        			{
+            				"type":"text",
+            				"text":"เตรียมการสร้างโพสการแข่งแล้ว"
+        			},
+        			{
+            				"type":"text",
+            				"text":"แข่งวันที่เท่าไหร่เหรอ?"
+        			}
+    				]
+				
+				$date = $text;
+				if($date == $text){$replyToken = $event['replyToken'];
+							"$messages":[
+        							{
+            								"type":"text",
+            								"text":"OK ตั้งวันที่แล้ว วันที่ "+$date
+        							},
+        							{
+            								"type":"text",
+            								"text":"แคลนไหนแข่งกับแคลนไหนหรอ?"
+        							}
+    								     ]}
+				    $vs = $text;
+				    if($vs == $text){$replyToken = $event['replyToken'];
+						    "$messages":[
+        							{
+            								"type":"text",
+            								"text":"OK "$date
+        							},
+        							{
+            								"type":"text",
+            								"text":"ประกาศ แข่งวันที่ "+$date+" ระหว่าง "+$vs
+        							}
+    								     ]}
+			}
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
